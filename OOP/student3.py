@@ -13,8 +13,22 @@ class Student:
         self.house = house
         self.patronus = patronus
 
+
     def __str__(self):
         return f"{self.name} from {self.house}"
+
+
+    def charm(self):
+        match self.patronus:
+            case "Stag":
+                return "##"
+            case "Otter":
+                return "@@"
+            case "Jack Russell terrier":
+                return "!!"
+            case _:
+                return "Sin patronus"
+
 
 def main():
     student = get_student()
