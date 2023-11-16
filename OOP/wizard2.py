@@ -9,4 +9,20 @@ class Vault:
 
 
     def ___str___(self):
-        
+        return f"{self.galleons} Galleons, {self.sickles} Sickles, {self.knuts}, Knuts"
+
+    def __add__(self, other):
+        galleons = self.galleons + other.galleons
+        sickles = self.sickles + other.sickles
+        knuts = self.knuts + other.knuts
+        return Vault(galleons, sickles, knuts)
+
+
+potter = Vault(100, 50, 20)
+print(potter)
+
+weasley = Vault(50, 30, 10)
+print(weasley)
+
+total = potter + weasley
+print(total)
